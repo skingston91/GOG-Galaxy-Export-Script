@@ -330,7 +330,7 @@ def extractData(args):
 		# Compile the CSV
 		try:
 			with open(args.fileCSV, 'w', encoding='utf-8', newline='') as csvfile:
-				writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=args.delimiter)
+				writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=',')
 				writer.writeheader()
 				for (ids, result) in results:
 					# Only consider games for the list, not DLCs
